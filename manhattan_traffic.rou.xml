@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <vType accel="100.0" decel="5.0" id="Car" length="2.0" maxSpeed="100.0" sigma="0.0" color="255,255,255"/>
+  <!--<route id="route1" edges="577976192#9 -577976192#9 -577976192#8 234725483 -455687907#3 5673305#0 243056525#4 608355942 608355937#0 608355937#1"/>-->
+  <route id="route1" edges="577976192#9 -577976192#9"/><!-- Only taking the first 2 edges/lanes-->
+  <route id="route2" edges="-577976192#9 -577976192#8"/><!-- Exact opposite of route 1-->
+  <vehicle depart="0.1" id="veh1" route="route1" type="Car"/><!-- I have changed the depart parameter to introduce the 3rd vehicle faster-->
+  <vehicle depart="0.4" id="veh2" route="route1" type="Car"/>
+  <vehicle depart="0.7" id="veh3" route="route2" type="Car" departPos="free" /> <!-- I have used departPos="free" because only this option made the 3rd vehicle appear in the SUMO simulation-->
+  <vehicle depart="70" id="veh4" route="route1" type="Car"/>
+  <vehicle depart="90" id="veh5" route="route1" type="Car"/>
+  <vehicle depart="110" id="veh6" route="route1" type="Car"/> 
+  <vehicle depart="130" id="veh7" route="route1" type="Car"/>
+  <vehicle depart="150" id="veh8" route="route1" type="Car"/>
+  <vehicle depart="170" id="veh9" route="route1" type="Car"/>
+  <vehicle depart="190" id="veh10" route="route1" type="Car"/>
+  <vehicle depart="210" id="veh11" route="route1" type="Car"/>
+</routes>
